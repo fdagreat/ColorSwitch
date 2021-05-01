@@ -33,6 +33,7 @@ function Circle() {
 	}
 
 	this.changeColour = function() {
+		document.getElementById("text").innerHTML = "Will you go"
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
 			newColour = colours[(Math.floor(Math.random() * colours.length))];
