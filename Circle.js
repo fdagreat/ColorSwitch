@@ -1,4 +1,5 @@
 function Circle() {
+	
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
 	this.radius = 11.5;
 	this.y = height * 0.8;
@@ -33,7 +34,11 @@ function Circle() {
 	}
 
 	this.changeColour = function() {
-		document.getElementById("text").innerHTML = "Will you go"
+		document.getElementById("text").innerHTML = `You are in level: ${level}`
+		// incrementing the level
+		level ++
+		// incrementing the Obstracle speed to make it more faster
+		OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.1
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
 			newColour = colours[(Math.floor(Math.random() * colours.length))];

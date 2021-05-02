@@ -4,6 +4,7 @@ var obstacles = [];
 var smallCircles = [];
 var numOffScreen = 0;
 var gameOver = false;
+//var level = 1
 function setup() {
   // Creating canvas and initializing variables
   createCanvas(400, 600);
@@ -49,6 +50,17 @@ function draw() {
 
   // Intersection occured; explode ball
   if (gameOver) {
+    document.getElementById("text").innerHTML = `Refresh the page to restart the game`
+    
+    var highScore = localStorage.getItem("highScore"); 
+    if (level > highScore) {
+      rewardMessage = true
+      localStorage.setItem("highScore", highScore);
+      document.getElementById("level").innerHTML = `Your score is ${level} and it is the new High Score`
+    }
+
+    document.getElementById("level").innerHTML = `Your score is ${level}, Highscore is  ${highScore}`
+
     if (numOffScreen >= 15) {
       this.end();
     }

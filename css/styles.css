@@ -6,9 +6,16 @@ body {
 
 h1 {
   position: absolute;
-  top: 800px;
+  top: 700px;
   bottom: auto;
   right: auto;
   left: auto;
+  margin-top: auto;
+}
+h3 {
+  position: absolute;
+  top: 650px;
+  bottom: auto;
+  right: 10;
   margin-top: auto;
 }
