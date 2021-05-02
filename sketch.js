@@ -4,6 +4,8 @@ var obstacles = [];
 var smallCircles = [];
 var numOffScreen = 0;
 var gameOver = false;
+var highScore = 1
+var highScore = localStorage.getItem("highScore"); 
 //var level = 1
 function setup() {
   // Creating canvas and initializing variables
@@ -52,15 +54,17 @@ function draw() {
   if (gameOver) {
     document.getElementById("text").innerHTML = `Refresh the page to restart the game`
     
-    var highScore = localStorage.getItem("highScore"); 
+    
     if (level > highScore) {
       rewardMessage = true
+      highScore = level
+      document.getElementById("level").innerHTML = `Your score is ${level} and it is the new High Score is ${highScore}`
       localStorage.setItem("highScore", highScore);
-      document.getElementById("level").innerHTML = `Your score is ${level} and it is the new High Score`
     }
 
+    if (level < highScore) {
     document.getElementById("level").innerHTML = `Your score is ${level}, Highscore is  ${highScore}`
-
+    }
     if (numOffScreen >= 15) {
       this.end();
     }

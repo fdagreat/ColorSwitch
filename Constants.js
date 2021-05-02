@@ -8,11 +8,11 @@ var colours = [
 var OBSTACLE_VELOCITY = 1;
 var CIRCLE_BOUNDARY = 600 * 0.6;
 var level = 1;
-var highScore
+// var highScore =3
 
-if (highScore != null){
-	var highScore = localStorage.getItem("highScore");
-}
+// if (highScore > 3){
+// 	var highScore = localStorage.getItem("highScore");
+// }
 
 
 // if (level > 3) {
