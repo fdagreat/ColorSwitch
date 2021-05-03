@@ -9,8 +9,8 @@ var highScore = localStorage.getItem("highScore");
 
 function setup() {
   // Creating canvas and initializing variables
-  createCanvas(windowWidth-500, windowHeight-50);
-  //createCanvas(400,600);
+  //createCanvas(windowWidth-500, windowHeight-50);
+  createCanvas(400,600);
   circle = new Circle();
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 

@@ -6,10 +6,12 @@ body {
 div {
   position:fixed; 
   width:100%; 
-  height:auto; 
+  height:70; 
   background-color:yellow; 
   padding:5px; 
   bottom:0px;
+  top: 600px; 
+  bottom: 600;
 }
 
 
