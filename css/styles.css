@@ -6,7 +6,7 @@ body {
 div {
   position:fixed; 
   width:100%; 
-  height:95px; 
+  height:auto; 
   background-color:yellow; 
   padding:5px; 
   bottom:0px;
