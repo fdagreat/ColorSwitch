@@ -6,15 +6,12 @@ var numOffScreen = 0;
 var gameOver = false;
 var highScore = 1
 var highScore = localStorage.getItem("highScore"); 
-var scale = 'scale(1)';
 
 function setup() {
   // Creating canvas and initializing variables
   //createCanvas(windowWidth-500, windowHeight-50);
   createCanvas(400,600);
   circle = new Circle();
-  var scale = 'scale(1)';
-document.body.style.transform =  scale;
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 
   for (var i = 0; i < 20; i++) {
