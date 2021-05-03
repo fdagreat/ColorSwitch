@@ -90,7 +90,7 @@ function draw() {
 }
 
 function keyPressed() {
-  if (key == ' ') {
+  if (key == ' ' || x ==1 ) {
     circle.up();
   }
 }

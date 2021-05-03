@@ -1,5 +1,10 @@
 function Circle() {
+var buttonColour;
+
+
 	
+
+
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
 	this.radius = 5;
 	this.y = height * 0.8;
@@ -13,6 +18,20 @@ function Circle() {
 		fill(this.colour[0], this.colour[1], this.colour[2]);
 		ellipse(this.x, this.y, this.radius*2, this.radius * 2);
 	}
+	// if (this.color = "0,204,204"){
+	// 	buttonColor = `#00cccc`
+	// }
+	// if (this.color = "255,255,51"){
+	// 	buttonColor = `#ffff33`
+	// }
+	// if (this.color = "255,0,0"){
+	// 	buttonColor = `#ff0000`
+	// }
+	// if (this.color = "153,0,153"){
+	// 	buttonColor = `#990099`
+	// }
+	// document.getElementById("jump").innerHTML= `${this.color}`
+
 
 	this.update = function() {
 		this.velocity += this.gravity;
@@ -50,10 +69,31 @@ function Circle() {
 		level ++
 		// incrementing the Obstracle speed to make it more faster
 		OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.15
+
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
 			newColour = colours[(Math.floor(Math.random() * colours.length))];
+			
 		}
 		this.colour = newColour;
+
+		if (newColour== "0,204,204"){
+			buttonColour = `#00cccc`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "255,255,51"){
+			buttonColour = `#ffff33`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "255,0,0"){
+			buttonColour = `#ff0000`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "153,0,153"){
+			buttonColour = `#990099`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+
+		//document.getElementById("jump").innerHTML= `#${newColour}`
 	}
 }
