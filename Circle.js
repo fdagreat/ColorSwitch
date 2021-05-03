@@ -76,24 +76,24 @@ var buttonColour;
 			
 		}
 		this.colour = newColour;
+		
+// Code for changing button color according to circle color
+		// if (newColour== "0,204,204"){
+		// 	buttonColour = `#00cccc`
+		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		// }
+		// if (newColour== "255,255,51"){
+		// 	buttonColour = `#ffff33`
+		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		// }
+		// if (newColour== "255,0,0"){
+		// 	buttonColour = `#ff0000`
+		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		// }
+		// if (newColour== "153,0,153"){
+		// 	buttonColour = `#990099`
+		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		// }
 
-		if (newColour== "0,204,204"){
-			buttonColour = `#00cccc`
-			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		}
-		if (newColour== "255,255,51"){
-			buttonColour = `#ffff33`
-			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		}
-		if (newColour== "255,0,0"){
-			buttonColour = `#ff0000`
-			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		}
-		if (newColour== "153,0,153"){
-			buttonColour = `#990099`
-			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		}
-
-		//document.getElementById("jump").innerHTML= `#${newColour}`
 	}
 }
