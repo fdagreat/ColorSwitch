@@ -88,9 +88,12 @@ function draw() {
     circle.update();
   }
 }
-
+//Pressing any key bring ball up
+window.addEventListener('keydown', function (e) {
+  circle.up();
+}, false);
 function keyPressed() {
-  if (key == ' ' || x==  1 ) {
+  if (x ==  1 ) {
     circle.up();
   }
 }
