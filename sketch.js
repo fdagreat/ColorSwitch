@@ -55,7 +55,7 @@ function draw() {
 
   // Intersection occured; explode ball
   if (gameOver) {
-    document.getElementById("text").innerHTML = `Refresh the page to restart the game`
+    document.getElementById("text").innerHTML = `Press Here or refresh to Restart the Game`
     
     
     if (level > highScore) {
@@ -102,6 +102,10 @@ function keyPressed() {
     circle.up();
   }
 }
+
+function refreshPage(){
+  window.location.reload();
+} 
 
 // Screen flashes white for a second and ball explodes
 function gameOverAnimation() {
