@@ -30,8 +30,8 @@ button {
     box-sizing: inherit;
     color: burlywood;
     
-   
-    height: 100px;
+    max-height: auto;
+    min-height: 100;
     letter-spacing: 0.5px;
     line-height: 60px;
     padding: 0px 1rem;

@@ -9,7 +9,7 @@ var highScore = localStorage.getItem("highScore");
 
 function setup() {
   // Creating canvas and initializing variables
-  createCanvas(400, 600);
+  createCanvas(450, 600);
   circle = new Circle();
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 
@@ -90,7 +90,7 @@ function draw() {
 }
 
 function keyPressed() {
-  if (key == ' ' || x ==1 ) {
+  if (key == ' ' || x==  1 ) {
     circle.up();
   }
 }
