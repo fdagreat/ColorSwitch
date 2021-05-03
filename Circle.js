@@ -1,5 +1,5 @@
 function Circle() {
-var buttonColour;
+var divColour;
 
 
 	
@@ -19,18 +19,18 @@ var buttonColour;
 		ellipse(this.x, this.y, this.radius*2, this.radius * 2);
 	}
 	// if (this.color = "0,204,204"){
-	// 	buttonColor = `#00cccc`
+	// 	divColour = `#00cccc`
 	// }
 	// if (this.color = "255,255,51"){
-	// 	buttonColor = `#ffff33`
+	// 	divColour = `#ffff33`
 	// }
 	// if (this.color = "255,0,0"){
-	// 	buttonColor = `#ff0000`
+	// 	divColour = `#ff0000`
 	// }
 	// if (this.color = "153,0,153"){
-	// 	buttonColor = `#990099`
+	// 	divColour = `#990099`
 	// }
-	// document.getElementById("jump").innerHTML= `${this.color}`
+	// document.getElementById("div").innerHTML= `${this.color}`
 
 
 	this.update = function() {
@@ -76,24 +76,24 @@ var buttonColour;
 			
 		}
 		this.colour = newColour;
-		
+
 // Code for changing button color according to circle color
-		// if (newColour== "0,204,204"){
-		// 	buttonColour = `#00cccc`
-		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		// }
-		// if (newColour== "255,255,51"){
-		// 	buttonColour = `#ffff33`
-		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		// }
-		// if (newColour== "255,0,0"){
-		// 	buttonColour = `#ff0000`
-		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		// }
-		// if (newColour== "153,0,153"){
-		// 	buttonColour = `#990099`
-		// 	document.getElementById("jump").style.backgroundColor= `${buttonColour}`
-		// }
+		if (newColour== "0,204,204"){
+			divColour = `#00cccc`
+			document.getElementById("div").style.backgroundColor= `${divColour}`
+		}
+		if (newColour== "255,255,51"){
+			divColour = `#ffff33`
+			document.getElementById("div").style.backgroundColor= `${divColour}`
+		}
+		if (newColour== "255,0,0"){
+			divColour = `#ff0000`
+			document.getElementById("div").style.backgroundColor= `${divColour}`
+		}
+		if (newColour== "153,0,153"){
+			divColour = `#990099`
+			document.getElementById("div").style.backgroundColor= `${divColour}`
+		}
 
 	}
 }
