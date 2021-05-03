@@ -29,13 +29,14 @@ button {
     box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
     box-sizing: inherit;
     color: burlywood;
-    cursor: pointer;
-    display: inline-block;
-    height: 42px;
+    
+   
+    height: 100px;
     letter-spacing: 0.5px;
-    line-height: 42px;
+    line-height: 60px;
     padding: 0px 1rem;
     pointer-events: all;
+    text-emphasis: size;
     text-decoration-line: none;
     text-transform: uppercase;
     vertical-align: middle;
