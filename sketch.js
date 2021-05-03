@@ -92,10 +92,10 @@ function draw() {
 window.addEventListener('keydown', function (e) {
   circle.up();
 }, false);
-
-// this function fires with any touch anywhere
-function touchStarted() {
-  circle.up();
+function keyPressed() {
+  if (x ==  1 ) {
+    circle.up();
+  }
 }
 
 // Screen flashes white for a second and ball explodes

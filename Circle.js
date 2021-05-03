@@ -76,6 +76,7 @@ var divColour;
 			
 		}
 		this.colour = newColour;
+<<<<<<< HEAD
 
 // Code for changing button color according to circle color
 		if (newColour== "0,204,204"){
@@ -94,6 +95,26 @@ var divColour;
 			divColour = `#990099`
 			document.getElementById("div").style.backgroundColor= `${divColour}`
 		}
+=======
+>>>>>>> parent of 73fe4b7... Touch Events can be detected on canvas and removed button
 
+		if (newColour== "0,204,204"){
+			buttonColour = `#00cccc`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "255,255,51"){
+			buttonColour = `#ffff33`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "255,0,0"){
+			buttonColour = `#ff0000`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+		if (newColour== "153,0,153"){
+			buttonColour = `#990099`
+			document.getElementById("jump").style.backgroundColor= `${buttonColour}`
+		}
+
+		//document.getElementById("jump").innerHTML= `#${newColour}`
 	}
 }
