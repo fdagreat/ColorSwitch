@@ -11,6 +11,8 @@ function setup() {
   // Creating canvas and initializing variables
   createCanvas(400, 600);
   circle = new Circle();
+  document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
+
   for (var i = 0; i < 20; i++) {
     colourChangers.push(new ColourChanger(width / 2, height * (1 - 2 * i) / 4));
     obstacles.push(new CircleObstacle(width / 2, height * (1 - i) / 2));
@@ -58,7 +60,7 @@ function draw() {
     if (level > highScore) {
       
       highScore = level
-      document.getElementById("level").innerHTML = `Your score is ${level} and it is the new High Score is ${highScore}`
+      document.getElementById("level").innerHTML = `Congrats you beat the High Score, Your score is ${level} and it is the new High Score is ${highScore}`
       localStorage.setItem("highScore", highScore);
     }
 
