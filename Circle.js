@@ -1,10 +1,6 @@
 function Circle() {
 var divColour;
 
-
-	
-
-
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
 	this.radius = 5;
 	this.y = height * 0.8;
@@ -18,19 +14,6 @@ var divColour;
 		fill(this.colour[0], this.colour[1], this.colour[2]);
 		ellipse(this.x, this.y, this.radius*2, this.radius * 2);
 	}
-	// if (this.color = "0,204,204"){
-	// 	divColour = `#00cccc`
-	// }
-	// if (this.color = "255,255,51"){
-	// 	divColour = `#ffff33`
-	// }
-	// if (this.color = "255,0,0"){
-	// 	divColour = `#ff0000`
-	// }
-	// if (this.color = "153,0,153"){
-	// 	divColour = `#990099`
-	// }
-	// document.getElementById("div").innerHTML= `${this.color}`
 
 
 	this.update = function() {
