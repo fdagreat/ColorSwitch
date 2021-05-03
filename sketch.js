@@ -56,7 +56,7 @@ function draw() {
     
     
     if (level > highScore) {
-      rewardMessage = true
+      
       highScore = level
       document.getElementById("level").innerHTML = `Your score is ${level} and it is the new High Score is ${highScore}`
       localStorage.setItem("highScore", highScore);

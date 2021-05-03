@@ -38,7 +38,7 @@ function Circle() {
 		// incrementing the level
 		level ++
 		// incrementing the Obstracle speed to make it more faster
-		OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.1
+		OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.15
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
 			newColour = colours[(Math.floor(Math.random() * colours.length))];
