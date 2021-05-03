@@ -54,21 +54,28 @@ var divColour;
 
 	this.changeColour = function() {
 
-		if (level >= 8) {
+		if (level >= 14) {
 			this.radius = 9;
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.01
 		}
-		if (level >= 5) {
+		if (level >= 10) {
 			this.radius = 8;
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.02
 		}
-		if (level <= 4) {
+		if (level >= 6) {
+			this.radius = 7;
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.06
+		}
+		if (level <= 5) {
 			this.radius = 6;
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.05
 		}
 
 		document.getElementById("text").innerHTML = `Score: ${level}`
 		// incrementing the level
 		level ++
 		// incrementing the Obstracle speed to make it more faster
-		OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.15
+		//OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.15
 
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
