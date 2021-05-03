@@ -8,11 +8,11 @@ div {
   position: absolute;
   text-align: center;
   width:100%; 
-  /* height:70;  */
+   height:20;  
   background-color:white; 
   /* padding:5px;  */
   bottom:1; 
-   top: 700px;  
+   /* top: 700px;   */
    align-content: center;
 
 }
