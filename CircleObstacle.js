@@ -32,7 +32,25 @@ function CircleObstacle(x, y) {
 	}
 
 	this.update = function() {
-		this.rotateOffset += 0.02;
+		// updating the rotation speed
+	
+		if (level >= 8) {
+			this.rotateOffset += 0.01;
+			this.outerRadius = 85;
+			this.innerRadius = 65;
+		}
+		if (level >= 5) {
+			this.rotateOffset += 0.01;
+			this.outerRadius = 73;
+			this.innerRadius = 65;
+		}
+		if (level <= 4) {
+			this.rotateOffset += 0.015;
+			this.outerRadius = 73;
+			this.innerRadius = 65;
+		}
+
+	
 		if (circle.y < CIRCLE_BOUNDARY) {
 			this.y += OBSTACLE_VELOCITY;
 		}

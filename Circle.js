@@ -1,7 +1,7 @@
 function Circle() {
 	
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
-	this.radius = 11.5;
+	this.radius = 5;
 	this.y = height * 0.8;
 	this.x = width / 2;
 
@@ -34,7 +34,18 @@ function Circle() {
 	}
 
 	this.changeColour = function() {
-		document.getElementById("text").innerHTML = `You are in level: ${level}`
+
+		if (level >= 8) {
+			this.radius = 9;
+		}
+		if (level >= 5) {
+			this.radius = 8;
+		}
+		if (level <= 4) {
+			this.radius = 6;
+		}
+
+		document.getElementById("text").innerHTML = `Score: ${level}`
 		// incrementing the level
 		level ++
 		// incrementing the Obstracle speed to make it more faster

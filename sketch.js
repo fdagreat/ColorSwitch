@@ -6,7 +6,7 @@ var numOffScreen = 0;
 var gameOver = false;
 var highScore = 1
 var highScore = localStorage.getItem("highScore"); 
-//var level = 1
+
 function setup() {
   // Creating canvas and initializing variables
   createCanvas(400, 600);
