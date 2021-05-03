@@ -89,6 +89,10 @@ function draw() {
     circle.update();
   }
 }
+
+function touchStarted() {
+  circle.up();
+}
 //Pressing any key bring ball up
 window.addEventListener('keydown', function (e) {
   circle.up();
