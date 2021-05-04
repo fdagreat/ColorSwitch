@@ -7,5 +7,5 @@ var colours = [
 
 var OBSTACLE_VELOCITY = 1;
 var CIRCLE_BOUNDARY = 600 * 0.6;
-var level = 18;
+var level = 1;
 
