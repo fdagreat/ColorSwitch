@@ -43,15 +43,15 @@ var divColour;
 		}
 		if (level >= 10) {
 			this.radius = 8;
-			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.02
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.06
 		}
 		if (level >= 6) {
 			this.radius = 7;
-			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.06
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.08
 		}
 		if (level <= 5) {
 			this.radius = 6;
-			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.05
+			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.07
 		}
 
 		document.getElementById("text").innerHTML = `Score: ${level}`
