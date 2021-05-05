@@ -36,6 +36,7 @@ var divColour;
 	}
 
 	this.changeColour = function() {
+		changecolorSound.play();
 
 		if (level >= 14) {
 			this.radius = 9;

@@ -7,11 +7,15 @@ var gameOver = false;
 var highScore = 1
 var highScore = localStorage.getItem("highScore"); 
 
+
+
 function setup() {
   // Creating canvas and initializing variables
   //createCanvas(windowWidth-500, windowHeight-50);
   createCanvas(400,600);
   circle = new Circle();
+  bgSound.amp(0.1)
+  bgSound.loop();
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 
   for (var i = 0; i < 20; i++) {
@@ -38,6 +42,8 @@ function draw() {
     // Check for intersection with circle
     if (obstacles[i].intersect() && !gameOver) {
       gameOver = true;
+      gameoverSound.play();
+
       // Populating array with small circles
       for (var i = 0; i < 15; i++) {
         smallCircles.push(new SmallCircle(circle.x, circle.y));
@@ -56,7 +62,7 @@ function draw() {
   // Intersection occured; explode ball
   if (gameOver) {
     document.getElementById("text").innerHTML = `Press Here or refresh to Restart the Game`
-    
+    bgSound.pause();
     
     if (level > highScore) {
       
@@ -92,14 +98,18 @@ function draw() {
 
 function touchStarted() {
   circle.up();
+  tapSound.play();
+
 }
 //Pressing any key bring ball up
 window.addEventListener('keydown', function (e) {
   circle.up();
+  tapSound.play();
 }, false);
 function keyPressed() {
   if (x ==  1 ) {
     circle.up();
+    tapSound.play();
   }
 }
 
