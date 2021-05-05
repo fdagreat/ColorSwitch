@@ -5,9 +5,15 @@ But this time, am personalising it so that i can use it to ask my crush for Prom
 Yes i know this is so nerdy but she likes games and like coding, so Why not?
 
 
-background music;
-In Dreams by Scott Buckley | www.scottbuckley.com.au
-Music promoted by https://www.chosic.com
-Attribution 4.0 International (CC BY 4.0)
-https://creativecommons.org/licenses/by/4.0/ 
+background sounds" All from https://mixkit.co/free-sound-effects/game/ 
+Music: “Around the World”, from www.PlayOnLoop.com 
 
+Special Thanks to 
+Game Testers 
+- Noah
+- Jumaa
+- Faustin
+- Ismail
+
+Thanks to for the original github repository 
+@legharir 
