@@ -14,7 +14,8 @@ function setup() {
   //createCanvas(windowWidth-500, windowHeight-50);
   createCanvas(400,600);
   circle = new Circle();
-  //bgSound.play();
+  bgSound.amp(0.1)
+  bgSound.loop();
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 
   for (var i = 0; i < 20; i++) {
@@ -61,7 +62,7 @@ function draw() {
   // Intersection occured; explode ball
   if (gameOver) {
     document.getElementById("text").innerHTML = `Press Here or refresh to Restart the Game`
-    
+    bgSound.pause();
     
     if (level > highScore) {
       
@@ -103,10 +104,12 @@ function touchStarted() {
 //Pressing any key bring ball up
 window.addEventListener('keydown', function (e) {
   circle.up();
+  tapSound.play();
 }, false);
 function keyPressed() {
   if (x ==  1 ) {
     circle.up();
+    tapSound.play();
   }
 }
 

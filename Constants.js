@@ -17,5 +17,5 @@ function preload() {
 	gameoverSound = loadSound('sounds/gameover.wav');
 	colorSound = loadSound('sounds/changecolor.wav');
 	tapSound = loadSound('sounds/tap.wav');
- // bgsound = loadSound('sounds/bgsound.mp3');
+ 	bgSound = loadSound('sounds/bgsound.wav');
 }
