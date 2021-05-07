@@ -1,6 +1,6 @@
 function Circle() {
 var divColour;
-
+// Setting up variables for the Circle
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
 	this.radius = 5;
 	this.y = height * 0.8;
@@ -15,7 +15,7 @@ var divColour;
 		ellipse(this.x, this.y, this.radius*2, this.radius * 2);
 	}
 
-
+//Updating the ball position when it goes up acording to gravity and velocity
 	this.update = function() {
 		this.velocity += this.gravity;
 		this.y += this.velocity;
@@ -30,14 +30,18 @@ var divColour;
 		}
 	}
 
+	// Updating the velocity and acording to the gravity
 	this.up = function() {
 		this.velocity = this.lift;
 		this.velocity += this.lift * 0.7;
 	}
 
+	// This to do when the color is changed 
 	this.changeColour = function() {
+		// Play sound when Color changes
 		changecolorSound.play();
 
+		// Updating the Object Velocity to change to rotation speed and size of the circle according to the level
 		if (level >= 14) {
 			this.radius = 9;
 			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.01
@@ -55,12 +59,13 @@ var divColour;
 			OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.07
 		}
 
+		// Updating the the Score and showing ot the user
 		document.getElementById("text").innerHTML = `Score: ${level}`
+
 		// incrementing the level
 		level ++
-		// incrementing the Obstracle speed to make it more faster
-		//OBSTACLE_VELOCITY = OBSTACLE_VELOCITY + 0.15
 
+		// Updating the Color
 		var newColour = colours[(Math.floor(Math.random() * colours.length))];
 		while (newColour == this.colour) {
 			newColour = colours[(Math.floor(Math.random() * colours.length))];
@@ -69,7 +74,7 @@ var divColour;
 		this.colour = newColour;
 
 
-// Code for changing button color according to circle color
+// Changing Top section color according to circle color
 		if (newColour== "0,204,204"){
 			divColour = `#00cccc`
 			document.getElementById("div").style.backgroundColor= `${divColour}`

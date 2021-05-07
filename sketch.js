@@ -5,17 +5,25 @@ var smallCircles = [];
 var numOffScreen = 0;
 var gameOver = false;
 var highScore = 1
+
+// Getting the highscore value from the browser local storage.
 var highScore = localStorage.getItem("highScore"); 
 
+var x;
 
 
 function setup() {
   // Creating canvas and initializing variables
-  //createCanvas(windowWidth-500, windowHeight-50);
   createCanvas(400,600);
   circle = new Circle();
+
+  // Keep background sound volume to be 0.1 (low)
   bgSound.amp(0.1)
+
+  // Loop the background music
   bgSound.loop();
+
+  //Show the current HighScore
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
 
   for (var i = 0; i < 20; i++) {
@@ -64,55 +72,59 @@ function draw() {
     document.getElementById("text").innerHTML = `Press Here or refresh to Restart the Game`
     bgSound.pause();
     
+    // if the Score of the user is Greater than the Highscore
     if (level > highScore) {
-      
       highScore = level
       document.getElementById("level").innerHTML = `Congrats you beat the High Score, Your score is ${level} and it is the new High Score is ${highScore}`
       localStorage.setItem("highScore", highScore);
     }
 
+    // if the Score of the user is Less than the Highscore
     if (level < highScore) {
     document.getElementById("level").innerHTML = `Your score is ${level}, Highscore is  ${highScore}`
     }
+
+    // When the numOffScreen is greater than 15 then the game should stop 
     if (numOffScreen >= 15) {
-      this.end();
-    }
+      console.log("Game Over")}
+       this.end();} // Even tho this line gives error but it will help stop the game
+    
 
     for (var i = 0; i < smallCircles.length; i++) {
       smallCircles[i].show();
       smallCircles[i].update();
 
+      
       if (smallCircles[i].offscreen()) {
         smallCircles.splice(i, 1);
         numOffScreen++;
+        console.log(numOffScreen)
       }
     }
   }
 
+  // keep showing the game if it is not Game Over
   if (!gameOver) {
     // Show the main circle
     circle.show();
     circle.update();
   }
-}
 
+
+// function to key bring ball up When screen is touched
 function touchStarted() {
   circle.up();
   tapSound.play();
 
 }
+
 //Pressing any key bring ball up
 window.addEventListener('keydown', function (e) {
   circle.up();
   tapSound.play();
 }, false);
-function keyPressed() {
-  if (x ==  1 ) {
-    circle.up();
-    tapSound.play();
-  }
-}
 
+// function to refresh the page 
 function refreshPage(){
   window.location.reload();
 } 
