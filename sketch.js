@@ -84,17 +84,17 @@ function draw() {
     document.getElementById("level").innerHTML = `Your score is ${level}, Highscore is  ${highScore}`
     }
 
-    // When the numOffScreen is greater than 15 then the game should stop 
-    if (numOffScreen >= 15) {
-      console.log("Game Over")}
-       this.end();} // Even tho this line gives error but it will help stop the game
     
+    if (numOffScreen >= 15) {
+      console.log("End")
+      this.end();
+    } // Even tho this line gives error but it will help stop the game
+   
 
     for (var i = 0; i < smallCircles.length; i++) {
       smallCircles[i].show();
       smallCircles[i].update();
 
-      
       if (smallCircles[i].offscreen()) {
         smallCircles.splice(i, 1);
         numOffScreen++;
@@ -109,7 +109,7 @@ function draw() {
     circle.show();
     circle.update();
   }
-
+}
 
 // function to key bring ball up When screen is touched
 function touchStarted() {
