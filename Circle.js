@@ -1,5 +1,7 @@
 function Circle() {
-var divColour;
+let divColour;
+let container = document.getElementById("container");
+let div = document.getElementById("div");
 // Setting up variables for the Circle
 	this.colour = colours[(Math.floor(Math.random() * colours.length))];
 	this.radius = 5;
@@ -77,19 +79,23 @@ var divColour;
 // Changing Top section color according to circle color
 		if (newColour== "0,204,204"){
 			divColour = `#00cccc`
-			document.getElementById("div").style.backgroundColor= `${divColour}`
+			container.style.backgroundColor= `${divColour}`
+			div.style.backgroundColor= `${divColour}`
 		}
 		if (newColour== "255,255,51"){
 			divColour = `#ffff33`
-			document.getElementById("div").style.backgroundColor= `${divColour}`
+			container.style.backgroundColor= `${divColour}`
+			div.style.backgroundColor= `${divColour}`
 		}
 		if (newColour== "255,0,0"){
 			divColour = `#ff0000`
-			document.getElementById("div").style.backgroundColor= `${divColour}`
+			container.style.backgroundColor= `${divColour}`
+			div.style.backgroundColor= `${divColour}`
 		}
 		if (newColour== "153,0,153"){
 			divColour = `#990099`
-			document.getElementById("div").style.backgroundColor= `${divColour}`
+			container.style.backgroundColor= `${divColour}`
+			div.style.backgroundColor= `${divColour}`
 		}
 
 	}
