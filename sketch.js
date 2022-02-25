@@ -5,6 +5,7 @@ var smallCircles = [];
 var numOffScreen = 0;
 var gameOver = false;
 var highScore = 1
+var music = true;
 
 // Getting the highscore value from the browser local storage.
 var highScore = localStorage.getItem("highScore"); 
@@ -21,7 +22,8 @@ function setup() {
   bgSound.amp(0.1)
 
   // Loop the background music
-  bgSound.loop();
+  if(music) { bgSound.loop() }
+  // bgSound.loop();
 
   //Show the current HighScore
   document.getElementById("level").innerHTML = `Current High Score is ${highScore}, Try to beat it`
@@ -30,6 +32,21 @@ function setup() {
     colourChangers.push(new ColourChanger(width / 2, height * (1 - 2 * i) / 4));
     obstacles.push(new CircleObstacle(width / 2, height * (1 - i) / 2));
   }
+}
+
+function musicToggle(){
+  if(!gameOver){
+  console.log('before',{music})
+  if(music){ 
+    bgSound.pause();
+    music = false;
+  }
+  else{
+    bgSound.play();
+    music = true;
+  }
+  console.log('after',{music})
+}
 }
 
 function draw() {
