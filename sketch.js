@@ -39,10 +39,12 @@ function musicToggle(){
   console.log('before',{music})
   if(music){ 
     bgSound.pause();
+    document.getElementById("mute_button").innerHTML = "Un mute"
     music = false;
   }
   else{
     bgSound.play();
+    document.getElementById("mute_button").innerHTML = "Mute"
     music = true;
   }
   console.log('after',{music})
